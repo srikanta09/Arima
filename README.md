@@ -4,6 +4,12 @@ Autoregressive integrated moving model is the generalized moving average model f
 * d - Specifies the degree of differencing
 * q - Specifies order of moving average.
 
+SARIMA models are ARIMA models with a seasonal component. Per the formula SARIMA(p,d,q)x(P,D,Q,s), the parameters for these types of models are as follows:
+p and seasonal P: indicate number of autoregressive terms (lags of the stationarized series)
+d and seasonal D: indicate differencing that must be done to stationarize series
+q and seasonal Q: indicate number of moving average terms (lags of the forecast errors)
+s: indicates seasonal length in the data
+
 ARIMA is implemented python stats library which will be used for training and predictions. This project uses a non seasonal variant of ARIMA.
 ## Data set
 Non seasonal ARIMA has been verified against two data sets. The first one includes temperature data and second one includes passenger data. Both are available online.<br/>
